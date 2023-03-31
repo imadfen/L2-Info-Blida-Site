@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)http://localhost:8080/L2%20Info%20site/pages/announces.php -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Announces</title>
+    <link rel="stylesheet" href="../src/Announces-admin_files/navBarStyle.css">
+    <link rel="stylesheet" href="../src/Announces-admin_files/langBtnStyle.css">
+    <link rel="stylesheet" href="../src/Announces-admin_files/all.min.css">
+    <link rel="stylesheet" href="../src/Announces-admin_files/menuStyle.css">
+    <link rel="stylesheet" href="../src/Announces-admin_files/loaderStyle.css">
+    <link rel="stylesheet" href="../src/Announces.style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="../src/Announces-admin_files/jquery-3.5.1.min.js.download"></script>
+    <script>
+        if(window.history.replaceState){
+            window.history.replaceState(null, null, window.location.href);
+        }
+    </script>
+    <script>
+        function checker(){
+            var result = confirm("Are you sure you want to delete the announcement?");
+
+            if(result == false){
+                event.preventDefault();
+            }
+        }
+    </script>
+
+</head>
+<body onload="hide()">
+
+    <div class="loader-wrapper" style="display: none;">
+        <div class="loader"></div>
+    </div>
+
+    <script>
+        $(window).on("load",function(){
+            $('.loader-wrapper').fadeOut("slow");
+        });
+    </script>
+
+
+    <div class="container">
+        <h1 class="title">License 2 Computer Science</h1>
+        <nav>
+            <ul>
+                <li><a href="Announces-member.html" id="home">Member view</a></li>
+                <li><a href="../index.html" id="home"><i class="fa-solid fa-house fa-lg"></i></a></li>
+                <li><button id="menuBtn" onclick="show()"><i class="fa-solid fa-bars fa-2x"></i></button></li>
+                    
+            </ul>
+        </nav>
+
+         <script>
+            function hide(){
+                document.getElementById('menu').classList.toggle('inactive');
+            }
+            
+            function show(){
+                document.getElementById('menu').classList.toggle('active');
+            }
+         </script>   
+    </div>
+
+
+    <h1 id="titleCour">Announces</h1>
+    <button id="upload" onclick="show2()">Add</button>    
+
+    <div class="passch" id="passch" hidden="">
+        <div class="passwindow">
+            <button id="closebtn" onclick="hide2()"><i class="fa-solid fa-xmark fa-3x"></i></button>
+            <h1 style="text-align: center; width:fit-content; margin: 10px auto;">Add Announcement</h1>
+
+
+            
+
+
+            <form method="post" id="form">
+                <textarea name="announceinput" cols="30" rows="10" placeholder="Announcement..." required="" style="outline: none;"></textarea>
+                <div id="submit">
+                    <div>
+                        <button class="subbtn" name="pub" type="submit">publish</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <script>
+        function hide2(){
+            document.getElementById('passch').style.display = 'none';
+        }
+
+        function show2(){
+            document.getElementById('passch').style.display = 'block';
+        }
+    </script>
+
+    
+                    <div class="announce">
+                        <div class="anninfo" style="display: flex; padding-bottom: 0;">
+                            <p id="by">by <b>Imad Fenniche</b><spam id="date">(17/09/2022 
+ 12:56)</spam></p>
+                            
+                        </div>
+                            <div class="options">
+                                    <a href=""><button id="visibal" name="visible"><i class="fa-solid fa-eye-slash"></i></button></a>
+                                    <a href=""><button id="edit" name="edit">Edit</button></a>
+                                    <a href="" onclick="checker()"><button id="delete" name="delete">Delete</button></a>
+                            </div>
+                        <div class="anntext">
+                            <p>
+                                hello world
+                            </p>
+                        </div>
+                    </div>
+                    <div class="announce">
+                        <div class="anninfo" style="display: flex; padding-bottom: 0;">
+                            <p id="by">by <b>Imad Fenniche</b><spam id="date">(16/09/2022 
+ 22:05)</spam></p>
+                            
+                        </div>
+                            <div class="options">
+                                    <a href=""><button id="visibal" name="visible"><i class="fa-solid fa-eye-slash"></i></button></a>
+                                    <a href=""><button id="edit" name="edit">Edit</button></a>
+                                    <a href="" onclick="checker()"><button id="delete" name="delete">Delete</button></a>
+                            </div>
+                        <div class="anntext">
+                            <p>
+                                It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum    
+                            </p>
+                        </div>
+                    </div>
+                    <div class="announce">
+                        <div class="anninfo" style="display: flex; padding-bottom: 0;">
+                            <p id="by">by <b>Imad Fenniche</b><spam id="date">(16/09/2022 
+ 20:02)</spam></p>
+                            
+                        </div>
+                        <div class="options">
+                                <a href=""><button id="visibal" name="visible"><i class="fa-solid fa-eye"></i></button></a>
+                                <a href=""><button id="edit" name="edit">Edit</button></a>
+                                <a href="" onclick="checker()"><button id="delete" name="delete">Delete</button></a>
+                        </div>
+                        <div class="anntext">
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.    
+                            </p>
+                        </div>
+                    </div>        
+
+
+</body></html>

@@ -1,0 +1,183 @@
+body{
+    background: rgb(223, 251, 255);
+    margin: 0%;
+    z-index: 1;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+}
+
+h1{
+    text-align: center;
+}
+
+.field{
+    margin: 40px auto;
+    background-color: #b1dae7;
+    width: fit-content;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0px 0px 0.9px rgba(0, 0, 0, 0.183), 0px 0px 2.3px rgba(0, 0, 0, 0.262), 0px 0px 4.6px rgba(0, 0, 0, 0.328), 0px 0px 9.5px rgba(0, 0, 0, 0.407), 0px 0px 26px rgba(0, 0, 0, 0.59);
+
+}
+
+.form{
+    width: fit-content;
+    margin: 0 auto;
+}
+
+input{
+    border: 2px solid #245280 ;
+    font-family: 'work sans', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 20px;
+    height: 35px;
+}
+
+.inputfield input{
+    padding-left: 40px;
+}
+
+.inputfield{
+    position: relative;
+    margin: 2px auto;
+}
+
+.inputfield i{
+    position: absolute;
+    left: 13px;
+    top: 12px;
+}
+
+.note p{
+    font-size: 10px;
+    text-align: left;
+    margin: 7px auto;
+}
+
+.inputfield p{
+    font-size: 10px;
+    text-align: center;
+    margin: 7px auto;
+}
+
+.field #badgefile{
+    background-color: #fff;
+    width: 250px;
+    padding-left: 0;
+}
+#badge{
+    text-align: center;
+    margin-top: 20px;
+    height: 60px;
+    width: fit-content;
+    margin: 20px auto 0 auto;
+}
+
+::-webkit-file-upload-button{
+    color: white;
+    background-color: #245280;
+    height: 100%;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 1px 0 1px 1px black;
+}
+::-webkit-file-upload-button:hover{
+    background-color: #406488;
+}
+
+span{
+    font-size: 18px;
+}
+
+.note{
+    width: 350px;
+    margin: 30px;
+    background-color: rgb(243, 191, 131);
+    border-radius: 20px;
+    padding: 10px 20px 20px 20px;
+}
+.field h4{
+    margin: 5px auto 5px auto;
+    width: fit-content;
+}
+.n p{
+    font-size: 15px;
+    width: 90%;
+    margin: 0;
+}
+.n{
+    display: inline-flex;
+}
+.n i{
+    margin: 0 10px 0 0;
+}
+
+#submit{
+    margin: 15px auto 0 auto;
+    overflow: hidden;
+    width: 400px;
+    height: 60px;
+    position: relative;
+}
+
+#submit div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.subbtn {
+ position: relative;
+ padding: 10px 40px;
+ margin: 0px auto;
+ float: left;
+ border-radius: 3px;
+ font-size: 20px;
+ color: #FFF;
+ text-decoration: none;
+ background-color: #e06100;
+ border: none;
+ border-bottom: 5px solid #9b4300;
+ text-shadow: 0px -2px #9b4300;
+ -webkit-transition: all 0.1s;
+ transition: all 0.1s;
+}
+
+.subbtn:hover, .subbtn:active {
+ -webkit-transform: translate(0px,5px);
+ -ms-transform: translate(0px,5px);
+ transform: translate(0px,5px);
+ border-bottom: 1px solid #9b4300;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+@media screen and (max-width: 414px) and (min-width: 360px){
+    .note{
+        width: 290px;
+        margin: 10px;
+        border: none;
+    }
+
+    .n p{
+        font-size: 15px;
+    }
+
+    #badge span{
+        font-size: 15px;
+    }
+
+    #submit{
+        margin: 15px auto 0 auto;
+        width: 300px;
+    }
+    
+}

@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="../src/Courses_files/navBarStyle.css">
+    <link rel="stylesheet" href="../src/Courses_files/langBtnStyle.css">
+    <link rel="stylesheet" href="../src/Courses_files/all.min.css">
+    <link rel="stylesheet" href="../src/Courses_files/menuStyle.css">
+    <link rel="stylesheet" href="../src/Courses_files/loaderStyle.css">
+    <script src="../src/Courses_files/jquery-3.5.1.min.js.download"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Courses</title>
+    <style>
+        html{
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        body{
+            background: rgb(223, 251, 255);
+            margin: 0%;
+            z-index: 1;
+            font-family: 'Work Sans', sans-serif;
+            font-weight: 600;
+            overflow-x: hidden;
+        }
+
+
+        
+        #fields fieldset{
+            border: #245280 5px solid;
+            border-left: none;
+            border-right: none;
+            width: 90%;
+            margin: 0 auto;
+            padding: 30px;
+        }
+
+        legend{
+            font-size: 25px;
+            color: #245280;
+            font-weight: 700;
+        }
+
+        /*----------------------------------------------------------*/
+        /* From uiverse.io by @alexreyes091 */
+        .card {
+        width: 190px;
+        height: 220px;
+        padding: auto;
+        margin: 5px 15px;
+        display: inline-flex;
+        background: rgb(255, 255, 255);
+        border-bottom: 2px solid rgb(43, 168, 226);
+        border-right: 2px solid rgb(43, 159, 226);
+        border-top: 2px solid white;
+        border-left: 2px solid white;
+        transition-duration: 1s;
+        transition-property: border-top, 
+            border-left, 
+            border-bottom,
+            border-right,
+            box-shadow;
+        }
+
+        .card:hover {
+        border-top: 2px solid rgb(43, 174, 226);
+        border-left: 2px solid rgb(43, 183, 226);
+        border-bottom: 2px solid rgb(103, 206, 238);
+        border-right: 2px solid rgb(103, 206, 238);
+        box-shadow: rgba(46, 169, 240, 0.4) 5px 5px, rgba(46, 227, 240, 0.3) 10px 10px, rgba(46, 195, 240, 0.2) 15px 15px, rgba(46, 146, 240, 0.1) 20px 20px, rgba(46, 185, 240, 0.05) 25px 25px;
+        }
+
+        .card__content {
+        font-size: small;
+        text-align: center;
+        }
+
+        .card__content-heading {
+        color: rgb(43, 116, 226);
+        }
+
+        .card__content-body p {
+        color: rgb(118, 104, 128);
+        padding-bottom: 1rem;
+        }
+
+        .card__content{width: fit-content; margin:1px auto;}
+
+        .card__content-footer button:not(#mbtn) {
+        background-color: rgb(255, 255, 255);
+        color: grey;
+        font-weight: 700;
+        border-radius: .2rem;
+        border: 1px solid grey;
+        padding: .5rem;
+        margin: 2px;
+        transition-duration: 1s;
+        transition-property: background-color, color, border;
+        }
+
+        button:not(#upload):not(#menuBtn):not(#mbtn):hover {
+        color: white;
+        background-color: rgb(103, 161, 238);
+        border: 1px solid white;
+        box-shadow: rgba(67, 79, 85, 0.27) 0px 0px 0.25em, rgba(90, 181, 188, 0.05) 0px 0.25em 1em;
+        }
+
+
+        /*----------------------------------------------------------*/
+
+
+
+        /*----------------------------------------------------------*/
+        
+        /* From uiverse.io */
+        #upload {
+        --color: #0b7fad;
+        font-family: inherit;
+        display: inline-block;
+        width: 8em;
+        height: 2.6em;
+        line-height: 2.5em;
+        margin: 20px;
+        position: relative;
+        overflow: hidden;
+        border: 2px solid var(--color);
+        transition: color .5s;
+        z-index: 1;
+        font-size: 17px;
+        border-radius: 6px;
+        font-weight: 500;
+        color: var(--color);
+        }
+
+        #upload:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        background: var(--color);
+        height: 150px;
+        width: 200px;
+        border-radius: 50%;
+        }
+
+        #upload:hover {
+        color: #fff;
+        }
+
+        #upload:before {
+        top: 100%;
+        left: 100%;
+        transition: all .7s;
+        }
+
+        #upload:hover:before {
+        top: -30px;
+        left: -30px;
+        }
+
+        #upload:active:before {
+        background: #0c8ca3;
+        transition: background 0s;
+        }
+        
+        
+        
+        
+        /*----------------------------------------------------------*/
+
+
+        #upload{
+            float: right;
+            position: absolute;
+            top: 170px;
+            right: 1px;
+            background-color: white;
+
+        }
+
+        .uploadfield{
+            text-align: center;
+            margin: 30px 0 0 0;
+            padding: 10px;
+            padding-bottom: 40px;
+            height: 300px;
+            background-color: #b1dae7;
+            position: relative;
+        }
+
+        .btn2{
+            float: none;
+            margin: 0 auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #titleCour{
+            font-size: 65px; margin: 40px; color: #245280; text-align: center;
+        }
+
+        @media screen and (max-width: 414px) and (min-width: 360px){
+            html{
+                width: 100%;
+                height: 100%;
+                padding: 0;
+                scroll-behavior: smooth;
+                overflow-x: hidden;
+            }
+            #home{display: none;}
+            #homeMob{display: flex;
+                    width: fit-content;
+                    position: absolute;
+                    right: 20px;top: 40px;}        
+            #menuBtn{top: 20px;}
+            #titleCour{font-size: 40px; margin: 20px auto 50px auto;}
+            #upload{position:relative; top: 0px; right: 1px;margin: 1px;}
+            #fields fieldset{padding: 20px;}
+            legend{font-size: 30px auto;}
+            .card {width: 130px;
+                    height: 200px;
+                    padding: 2%;
+                    margin: 5px 2px;}
+            .card__content-footer button {margin: 0px;}
+            body{
+                width: 100%;
+                height: 100%;
+                padding: 0;
+                scroll-behavior: smooth;
+                overflow-x: hidden;
+            }
+            #menu{display: none;}
+            #menu.active{display: block;}
+            .uploaddiv{position: absolute; top: 80%; left: 50%; transform: translateX(-50%);}
+        } 
+
+    </style>
+    
+
+
+
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="title">License 2 Computer Science</h1>
+        <nav>
+            <ul>
+                    <li><a href="../index.html" id="home"><i class="fa-solid fa-house fa-lg"></i></a></li>
+                    <li><button id="menuBtn" onclick="show()"><i class="fa-solid fa-bars fa-2x"></i></button></li>
+                    
+            </ul>
+        </nav> 
+    </div>
+
+
+    <h1 id="titleCour">Courses</h1>
+    <button id="upload" onclick="location.href = &#39;#uploadfield&#39;;">Upload Files</button>
+
+    <div class="S1" id="fields">
+        <fieldset>
+            <legend>SEMESTER 1</legend>
+            <div style="text-align: center;">
+                <div>
+                    <div class="card">
+                        <div class="card__content">
+                            <div class="card__content-heading">
+                                <h2>ALGO</h2>
+                                <br>
+                            </div>
+                            <div class="card__content-body">
+                                <p>Algorithmique et structure de données 3
+                                </p>
+                            </div>
+                            <div class="card__content-footer">
+                                <a href="" target="_blank" style="text-decoration: none;"><button>cours
+                                </button></a>
+                                <a href="" target="_blank" style="text-decoration: none;"><button>exos
+                                </button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__content">
+                        <div class="card__content-heading">
+                            <h2>ARCHI</h2>
+                            <br>
+                        </div>
+                        <div class="card__content-body">
+                            <p>Architecture des ordinateurs<br>&nbsp;
+                            </p>
+                        </div>
+                        <div class="card__content-footer">
+                            <a href="" target="_blank" style="text-decoration: none;"><button>cours
+                            </button></a>
+                            <a href="" target="_blank" style="text-decoration: none;"><button>exos
+                            </button></a>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__content">
+                        <div class="card__content-heading">
+                            <h2 id="decMob">SYST D'INFO</h2>
+                            <br>
+                        </div>
+                        <div class="card__content-body">
+                            <p>Systèmes d'information<br>&nbsp;
+                            </p>
+                        </div>
+                        <div class="card__content-footer">
+                            <a href="" target="_blank" style="text-decoration: none;"><button>cours
+                            </button></a>
+                            <a href="" target="_blank" style="text-decoration: none;"><button>exos
+                            </button></a>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card__content">
+                        <div class="card__content-heading">
+                            <h2>THEO GRAPHES</h2>
+                            <br>
+                        </div>
+                        <div class="card__content-body">
+                            <p>Théorie des graphes<br>&nbsp;
+                            </p>
+                        </div>
+                        <div class="card__content-footer">
+                            <a href="" target="_blank" style="text-decoration: none;"><button>cours
+                            </button></a>
+                            <a href="" target="_blank" style="text-decoration: none;"><button>exos
+                            </button></a>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div>
+                    <div class="card">
+                        <div class="card__content">
+                        <div class="card__content-heading">
+                            <h2>METHO NUM</h2>
+                            <br>
+                        </div>
+                        <div class="card__content-body">
+                            <p>Méthodes Numériques<br>
+                            </p>
+                        </div>
+                        <div class="card__content-footer">
+                            <a href="" target="_blank" style="text-decoration: none;"><button>cours
+                            </button></a>
+                            <a href="" target="_blank" style="text-decoration: none;"><button>exos
+                            </button></a>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__content">
+                        <div class="card__content-heading">
+                            <h2>LOGIQUE</h2>
+                            <br>
+                        </div>
+                        <div class="card__content-body">
+                            <p>Logique Mathématique<br>
+                            </p>
+                        </div>
+                        <div class="card__content-footer">
+                            <a href="" target="_blank" style="text-decoration: none;"><button>cours
+                            </button></a>
+                            <a href="" target="_blank" style="text-decoration: none;"><button>exos
+                            </button></a>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__content">
+                        <div class="card__content-heading">
+                            <h2>LANGUE 2</h2>
+                            <br>
+                        </div>
+                        <div class="card__content-body">
+                            <p>Langue Etrangère 2<br>
+                            </p>
+                        </div>
+                        <div class="card__content-footer">
+                            <a href="" target="_blank" style="text-decoration: none;"><button>cours
+                            </button></a>
+                            <a href="" target="_blank" style="text-decoration: none;"><button>exos
+                            </button></a>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </fieldset>
+    </div>
+
+
+    <div class="S2" id="fields" style="margin: 50px auto;">
+        <fieldset>
+            <legend>SEMESTER 2</legend>
+            <div style="text-align: center;">
+                <div>
+                    <div class="card">
+                        <div class="card__content">
+                            <div class="card__content-heading">
+                                <h2>THEO LANG</h2>
+                                <br>
+                            </div>
+                            <div class="card__content-body">
+                                <p>Théorie des langages
+                                </p>
+                            </div>
+                            <div class="card__content-footer">
+                                <a href="" target="_blank" style="text-decoration: none;"><button>cours
+                                </button></a>
+                                <a href="" target="_blank" style="text-decoration: none;"><button>exos
+                                </button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__content">
+                        <div class="card__content-heading">
+                            <h2>SYST EXPLOI</h2>
+                            <br>
+                        </div>
+                        <div class="card__content-body">
+                            <p>Système d'exploitation
+                            </p>
+                        </div>
+                        <div class="card__content-footer">
+                            <a href="" target="_blank" style="text-decoration: none;"><button>cours
+                            </button></a>
+                            <a href="" target="_blank" style="text-decoration: none;"><button>exos
+                            </button></a>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__content">
+                        <div class="card__content-heading">
+                            <h2>B.D</h2>
+                            <br>
+                        </div>
+                        <div class="card__content-body">
+                            <p>Base de données
+                            </p>
+                        </div>
+                        <div class="card__content-footer">
+                            <a href="" target="_blank" style="text-decoration: none;"><button>cours
+                            </button></a>
+                            <a href="" target="_blank" style="text-decoration: none;"><button>exos
+                            </button></a>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card__content">
+                        <div class="card__content-heading">
+                            <h2>RESEAUX</h2>
+                            <br>
+                        </div>
+                        <div class="card__content-body">
+                            <p>&nbsp;
+                            </p>
+                        </div>
+                        <div class="card__content-footer">
+                            <a href="" target="_blank" style="text-decoration: none;"><button>cours
+                            </button></a>
+                            <a href="" target="_blank" style="text-decoration: none;"><button>exos
+                            </button></a>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div>
+                    <div class="card">
+                        <div class="card__content">
+                        <div class="card__content-heading">
+                            <h2>P.O.O</h2>
+                            <br>
+                        </div>
+                        <div class="card__content-body">
+                            <p>Programmation orienté objet<br>&nbsp;
+                            </p>
+                        </div>
+                        <div class="card__content-footer">
+                            <a href="" target="_blank" style="text-decoration: none;"><button>cours
+                            </button></a>
+                            <a href="" target="_blank" style="text-decoration: none;"><button>exos
+                            </button></a>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__content">
+                        <div class="card__content-heading">
+                            <h2>DEV APP</h2>
+                            <br>
+                        </div>
+                        <div class="card__content-body">
+                            <p>Développement d'Applications Web<br>
+                            </p>
+                        </div>
+                        <div class="card__content-footer">
+                            <a href="" target="_blank" style="text-decoration: none;"><button>cours
+                            </button></a>
+                            <a href="" target="_blank" style="text-decoration: none;"><button>exos
+                            </button></a>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__content">
+                        <div class="card__content-heading">
+                            <h2>LANGUE 3</h2>
+                            <br>
+                        </div>
+                        <div class="card__content-body">
+                            <p>Langue Etrangère 3<br>&nbsp;
+                            </p>
+                        </div>
+                        <div class="card__content-footer">
+                            <a href="" target="_blank" style="text-decoration: none;"><button>cours
+                            </button></a>
+                            <a href="" target="_blank" style="text-decoration: none;"><button>exos
+                            </button></a>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </fieldset>
+    </div>
+
+    <div class="uploadfield" id="uploadfield">
+        <h1 style="width: 100%;">Upload Files</h1>
+        <p style="width: 100%;">Here you can upload files of courses and exercices for store them, 
+            please fill the form after clicking the button with the right answers to 
+            keep the files organized
+            <br><b>Your uploaded files will be reviewed within 12h for maximum</b>
+        </p>
+        <div class="uploaddiv">
+            <a href="" style="text-decoration: none;">
+                <button id="upload" class="btn2">Upload Files</button>
+            </a>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+</body></html>

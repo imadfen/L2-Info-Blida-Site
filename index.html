@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="./src/index_files/css2" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./src/index_files/css2(1)" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./src/index_files/jquery-3.5.1.min.js.download"></script>
+    <script src="./src/index_files/owl.carousel.js.download"></script>
+    <script src="./src/index_files/owl.carousel.min.js.download"></script>
+    <link rel="stylesheet" href="./src/index_files/jq">
+    <link rel="stylesheet" href="./src/index_files/owl.carousel.css">
+    <link rel="stylesheet" href="./src/index_files/owl.carousel.min.css">
+    <link rel="stylesheet" href="./src/index_files/owl.theme.default.css">
+    <link rel="stylesheet" href="./src/index_files/langBtnStyle.css">
+    <link rel="stylesheet" href="./src/index_files/navBarStyle.css">
+    <link rel="stylesheet" href="./src/index_files/goToBtnStyle.css">
+    <link rel="stylesheet" href="./src/index_files/logSignStyle.css">
+    <link rel="stylesheet" href="./src/index_files/sliderStyle.css">
+    <link rel="stylesheet" href="./src/index_files/elearningPlatformStyle.css">
+    <link rel="stylesheet" href="./src/index_files/inboxStyle.css">
+    <link rel="stylesheet" href="./src/index_files/all.min.css">
+    <link rel="stylesheet" href="./src/index_files/menuStyle.css">
+    <link rel="stylesheet" href="./src/index_files/loaderStyle.css">
+    <link rel="stylesheet" href="src/index_files/style.css">
+    <title>L2 Info Blida</title>
+    <style>
+        body{
+            background: rgb(223, 251, 255);
+            margin: 0%;
+            z-index: 1;
+            font-family: 'Work Sans', sans-serif;
+            font-weight: 600;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        #welcome{
+            font-family: 'Berkshire Swash', cursive;
+            font-size: 100px;
+            text-align: center;
+            color: #b1dae7;
+            margin: 20px;
+            -webkit-text-stroke: #245280 1px;
+        }
+
+        hr{
+            width: 80%;
+            height: 1px;
+            background-color: #245280;
+            border: 5px solid #245280;
+            border-radius:5px;
+            margin-bottom: 50px;
+        }
+
+
+        #made{
+            background-color: #b1dae7;
+            font-size: 13px;
+            margin: 0;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            text-align: center;
+        }
+
+        #made a{
+            font-size: 15;
+            font-weight: bolder;
+            color: black;
+        }
+
+        
+        #menuBtn{
+            background-color: transparent;
+            color: white;
+            border-color: transparent;
+            position: absolute;
+            right: 5px;
+            top: 20px;
+        }
+
+        #menuBtn:hover{
+            color: rgb(131, 131, 131);
+        }
+
+
+
+        .aboutParent h1{
+            font-size: 20px;
+            padding: 10px;
+            color: black;
+            border: none;
+            background-color: transparent;
+            box-shadow: none;
+        }
+
+        .aboutParent{
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            margin-bottom: 0;
+            position: relative;
+        }
+
+        .about{
+            background-color: #b1dae7;
+            width: 100%;
+            padding: 10px 50px;
+            margin-bottom: 0;
+            box-shadow: none;
+            border-radius: 0;
+        }
+
+        .about p{width: 80%;}
+
+
+        @media screen and (max-width: 414px) and (min-width: 360px){
+            html, body{
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                overflow-x: hidden;
+            }
+
+
+            #welcome{
+            font-size: 50px;
+            -webkit-text-stroke: #245280 0.5px;
+            margin: 10px;
+            }
+            
+            hr, .hr1{
+                height: 2px;
+                border: 3px;
+                margin-bottom: 30px;
+            }
+            #made{
+            font-size: 10px;
+            }
+
+            #made a{
+                font-size: 13;
+            }
+        
+
+            .about{
+                margin-top: 13px;
+                width: 100%;
+                padding: 5px 10px;
+            }
+
+            .about h1{
+                font-size: 12px;
+                margin: 5px;
+                padding: 0;
+            }
+
+            .about p{
+                font-size: 9px;
+                width: 90%;
+            }
+            .elearn{margin: 0 0 40px 0;}
+        }
+
+    </style>
+
+
+</head>
+
+<body>    
+    <div class="container">
+        <h1 class="title">License 2 Computer Science</h1>
+        <nav>
+            <ul>
+                    <li id="login"><a href="pages/Log in.html">Log In</a></li>
+                    <li id="signup"><a href="pages/Sign up.html">Sign up</a></li>
+                    <li id="loginMobile"><a href="#L2ComputerScience">Log in</a></li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <h1 id="welcome">Welcome</h1>
+
+    <script>
+        const button = document.getElementById("btn");
+        const list = document.getElementById("lang");
+
+        list.style.display = "none";
+        button.addEventListener("click", (event) =>{
+            if(list.style.display == "none"){
+                button.style.backgroundColor = "rgb(216, 216, 216)";
+                list.style.display = "block";
+            }else{
+                button.style.backgroundColor = "#b1dae7";
+                list.style.display = "none";
+            }
+        })
+
+    </script>
+    
+    
+    <div class="slider" >
+        <div class="owl-carousel top-banner owl-theme">
+            <div class="itemSlide">
+                <img src="./src/index_files/coursesSlide.png">
+                <div class="textSlide">
+                    <h1>Find Your Courses</h1>
+                    <p>If you are looking for courses, polycopes and exercices series of all the modules, you can find them here, from you to you,
+                        Contribute to filling the site with lesson files and links so that others can access and benefit from them.
+                        You can go directly to the lessons page to browse or add useful files with the button below.</p>
+
+                    <a href="pages/Courses.html">
+                        <button class="go-to">
+                            <div class="go-courses">
+                            <span class="circle" aria-hidden="true">
+                                <span class="icon arrow"></span>
+                            </span>
+                            <span class="button-text">GO TO COURSES</span>
+                            </div>
+                        </button>
+                    </a>
+                </div>
+            </div>
+
+            <div class="itemSlide">
+                <img src="./src/index_files/marksSlide.png">
+                <div class="textSlide">
+                    <h1>See Your Marks</h1>
+                    <p>You can check out the last released marks tables, and see what you got from general averages. You can go directly to the marks tables with the button below.</p>
+            
+                        <a href="pages/Log in.html">
+                    <button class="go-to">
+                        <div class="go-marks">
+                        <span class="circle" aria-hidden="true">
+                            <span class="icon arrow"></span>
+                        </span>
+                        <span class="button-text">GO TO MARKS TABLES</span>
+                        </div>
+                    </button>
+                </a>
+            </div>
+        </div>
+
+            <div class="itemSlide">
+                <img src="./src/index_files/announces.png">
+                <div class="textSlide">
+                    <h1>See Announces</h1>
+                    <p>If you want to see the last announces and news like the adminstration decisions and tests plannings, you can check out the announces page. You can go directly to the Announces with the button below.</p>
+                    <a href="pages/Announces-admin.html">
+                        <button class="go-to">
+                            <div class="go-announces">
+                            <span class="circle" aria-hidden="true">
+                                <span class="icon arrow"></span>
+                            </span>
+                            <span class="button-text">GO TO ANNOUNCES</span>
+                            </div>   
+                        </button>
+                    </a>
+                </div>
+            </div>
+
+            <div class="itemSlide">
+                <img src="./src/index_files/suggestionSlide.png">
+                <div class="textSlide">
+                    <h1>Put Your Suggestions</h2>
+                    <p>If you have a suggestion to make the things better, don't skimp on us, you can always leave your suggestions in the box for the admins to check it and deal with it. You can go directly to the suggestions box with the button below.</p>
+                    
+                    <a href="pages/Log in.html">
+                        <button class="go-to">
+                            <div class="go-courses">
+                            <span class="circle" aria-hidden="true">
+                                <span class="icon arrow"></span>
+                            </span>
+                            <span class="button-text">GO TO SUGGESTIONS BOX</span>
+                            </div>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <script>
+        jQuery(document).ready(function(){
+            $('.top-banner').owlCarousel({
+                items:1,
+                margin:20,
+                loop:true,
+                autoplay:true,
+            })
+        })
+    </script>
+
+
+    <div class="L2ComputerScience" id="L2ComputerScience">
+                <div id="image"><img src="./src/index_files/L2ComputerScience.png"></div>
+                <div class="logSignBtn">
+                    <a href="pages/Log in.html"><button class="logBtn">Log In</button></a>
+                    <a href="pages/Sign up.html"><button class="signBtn">Sign up</button></a>
+                </div>
+            </div>    <hr>
+
+    <div class="elearn">
+        <img src="./src/index_files/elearning pic.jpg" width="45%">
+        <div class="elearnText">
+            <h1>E-Learning Platform</h1>
+            <h4>If you want to go to the platform of E-Learning of Saad Dahlab University, here is a button to redirect you stright to it.</h4>
+            <a href="https://elearning.univ-blida.dz/" target="_blank">
+                <button class="cta">
+                    <span>PLATFORM</span>
+                    <svg viewBox="0 0 13 10" height="10px" width="15px">
+                        <path d="M1,5 L11,5"></path>
+                        <polyline points="8 1 12 5 8 9"></polyline>
+                    </svg>
+                </button>
+            </a>
+        </div>
+    </div>
+
+    <hr class="hr1">
+
+    <div class="inbox">
+        <div class="inboxText">
+            <h1>University Email</h1>
+            <h4>If you want to go to Saad Dahlab University mail and check your inbox, here is a button to redirect you stright to it.</h4>
+            <a href="https://etu.univ-blida.dz/" target="_blank">
+                <button class="cta">
+                    <span>UNIV INBOX</span>
+                    <svg viewBox="0 0 13 10" height="10px" width="15px">
+                        <path d="M1,5 L11,5"></path>
+                        <polyline points="8 1 12 5 8 9"></polyline>
+                    </svg>
+                </button>
+            </a>
+        </div>
+        <img src="./src/index_files/inbox.png" width="45%">
+    </div>
+
+    <div class="aboutParent">
+        <div class="about">
+                <h1>About The Website</h1>
+                <p>This website has been made especially for second year students of computer science licence studies of Saad Dahlab University (blida, Algeria), particulary batch of 2021.
+                    The website made to be filled with files of studies and courses via the studients themselves, so everyone have to share to help the others finding the courses and series or anything they need. 
+                <br>I am -Fenniche Mohamed Imad- glad to release this personal project hopfully it will be very helpfull, and to grow and be better by time.</p>
+                
+        </div>
+    </div>
+    <h6 id="made">Made By Fenniche Mohamed Imad</h6>
+
+</body></html>

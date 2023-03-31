@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Sign up</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../src/Sign up_files/navBarStyle.css">
+    <link rel="stylesheet" href="../src/Sign up_files/langBtnStyle.css">
+    <link rel="stylesheet" href="../src/Sign up_files/all.min.css">
+    <link href="../src/Sign up_files/info.css" rel="stylesheet">
+    <link rel="stylesheet" href="../src/Sign up_files/signupStyle.css">   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="title">License 2 Computer Science</h1>
+        <nav>
+            <ul>
+                <li id="login"><a href="Log in.html">log in</a></li>
+                <li id="home"><a href="../index.html"><i class="fa-solid fa-house fa-lg"></i></a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <script>
+        const button = document.getElementById("btn");
+        const list = document.getElementById("lang");
+
+        list.style.display = "none";
+        button.addEventListener("click", (event) =>{
+            if(list.style.display == "none"){
+                button.style.backgroundColor = "rgb(216, 216, 216)";
+                list.style.display = "block";
+            }else{
+                button.style.backgroundColor = "#b1dae7";
+                list.style.display = "none";
+            }
+        })
+
+    </script>
+
+
+
+
+<div class="field">
+    <div class="form">
+
+
+    
+
+
+    <form method="post">
+        <h1>Sign Up</h1>
+        <div class="inputfield" id="name">
+            <input type="text" name="user-name" placeholder="First Name" required="">
+            <br>
+            <i class="fa-solid fa-user"></i>
+        </div>
+        <div class="inputfield" id="lastname">
+            <input type="text" name="user-lastname" placeholder="Last Name" required="">
+            <br>
+            <i class="fa-solid fa-user"></i>
+        </div>
+        <div class="inputfield" id="registnum">
+            <input type="number" name="user-regist-num" placeholder="Registration Number" id="input" required="">
+            <br>
+            <i class="fa-solid fa-address-card"></i>
+            <p style="color: red;" id="error-warning" hidden="">The Registration Number has 12 characters</p>
+
+            <script>
+                const input = document.getElementById("input");
+                const limitWarning = document.getElementById("error-warning");
+
+                input.addEventListener("input", checkCodeLength);
+
+                function checkCodeLength(){
+                    const enteredCodeLength = input.value.length;
+                    
+                    if(enteredCodeLength != 12){
+                        limitWarning.hidden = false;
+                        input.classList.add("error");
+                    }else{
+                        limitWarning.hidden = true;
+                        input.classList.remove("error");
+                    }
+                }
+            </script>
+        </div>
+        <div class="inputfield" id="email">
+            <input type="email" name="user-email" placeholder="Email" required="">
+            <br>
+            <i class="fa-solid fa-envelope"></i>
+        </div>
+        <div class="inputfield" id="pass">
+            <input id="pass" type="password" name="user-pass" placeholder="Password" required="">
+            <br>
+            <i class="fa-solid fa-lock"></i>
+        </div>
+        <div class="inputfield" id="vpass">
+            <input id="vpass" type="password" name="user-vpass" placeholder="Confirm Password" required="">
+            <br>
+            <i class="fa-solid fa-lock"></i>
+
+        </div>
+
+
+        </form></div>
+
+        <div id="submit">
+            <div>
+            <button class="subbtn" type="submit" name="sign-btn">Sign Up</button>
+            </div>
+        </div>
+    
+
+
+    <div style="width: 100%; text-align: center; margin-bottom: 30px;">
+        <h4>You already have an account ? <a href="Log in.html" style="text-decoration: none; color: #245280;">Log in</a></h4>
+    </div>
+    
+
+</div>
+
+</body></html>

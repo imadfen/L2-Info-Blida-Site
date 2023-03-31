@@ -1,0 +1,349 @@
+html{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body{
+    background: rgb(223, 251, 255);
+    margin: 0%;
+    z-index: 1;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+    overflow-x: hidden;
+}
+
+
+#titleCour{
+    font-size: 65px; margin: 30px; color: #245280; text-align: center;
+}
+
+.txt{
+    background-color: white;
+    width: fit-content;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 21px rgba(0, 0, 0, 0.38);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.txt h1{
+    margin: 0;
+    font-size: 18px;
+
+}
+
+.txt0{
+    min-height: 100px;
+    width: 100%;
+    position: relative;
+}
+
+
+/*----------------------------------------------------------*/
+
+/* From uiverse.io */
+#upload {
+--color: #0b7fad;
+font-family: inherit;
+display: inline-block;
+width: 7em;
+height: 2.6em;
+line-height: 2.5em;
+margin: 20px;
+position: absolute;
+right: 20px;
+top: 140px;
+overflow: hidden;
+border: 2px solid var(--color);
+transition: color .5s;
+z-index: 1;
+font-size: 17px;
+border-radius: 6px;
+font-weight: 500;
+color: var(--color);
+}
+
+#upload:before {
+content: "";
+position: absolute;
+z-index: -1;
+background: var(--color);
+height: 150px;
+width: 200px;
+border-radius: 50%;
+}
+
+#upload:hover {
+color: #fff;
+}
+
+#upload:before {
+top: 100%;
+left: 100%;
+transition: all .7s;
+}
+
+#upload:hover:before {
+top: -30px;
+left: -30px;
+}
+
+#upload:active:before {
+background: #0c8ca3;
+transition: background 0s;
+}
+
+        
+/*----------------------------------------------------------*/
+
+
+.announce{
+    position: relative;
+    padding: 10px 30px;
+    margin-top: 40px;
+    margin: 40px auto;
+    width: 1100px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.56);
+}
+
+
+.announce .options{
+    float: right;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.announce #edit, #delete, #visibal{
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0;
+    background-color: white;
+    border: 1px;
+    border-radius: 15px;
+    padding: 10px 10px;
+    width: 67px;
+}
+
+#edit:hover,#delete:hover,#visibal:hover{
+    background-color: rgb(207, 207, 207);
+}
+
+.anninfo #by{
+    font-size: 19px;
+    padding-bottom: 0;
+}
+
+.anninfo #date{
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.658);
+    height: auto;
+    margin-left: 10px;
+    padding-bottom: 0;
+}
+
+.passch, .editch{
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.705);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.passwindow, .editwindow{
+    background-color: white;
+    width: 50%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    padding: 10px 40px 40px 40px;
+    text-align: center;
+}
+
+#form{
+    width: fit-content;
+    margin: 0 auto;
+}
+input{
+    margin-top: 40px;
+    border: 2px solid #245280 ;
+    font-family: 'work sans', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 20px;
+    height: 35px;
+    padding-left: 40px;
+}
+
+
+#submit{
+    margin-top: 15px;
+    overflow: hidden;
+    width: 100%;
+    height: 60px;
+    position: relative;
+}
+
+#submit div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.subbtn {
+position: relative;
+padding: 10px 40px;
+margin: 0px auto;
+float: left;
+border-radius: 3px;
+font-size: 20px;
+color: #FFF;
+text-decoration: none;
+background-color: #23c483;
+border: none;
+border-bottom: 5px solid rgb(29, 143, 97);
+text-shadow: 0px -2px rgb(29, 143, 97);
+-webkit-transition: all 0.1s;
+transition: all 0.1s;
+}
+
+.subbtn:hover, .subbtn:active {
+-webkit-transform: translate(0px,5px);
+-ms-transform: translate(0px,5px);
+transform: translate(0px,5px);
+border-bottom: 1px solid rgb(29, 143, 97);
+}
+
+#closebtn{
+    color: red;
+    float: right;
+    border: none;
+    background-color: transparent;
+}
+
+#closebtn:hover{
+    color: rgb(117, 0, 0);
+}
+
+#chanbtn{
+    width: 130px;
+    margin: 50px auto 10px auto;
+    float: right;
+}
+
+.passch textarea, .editwindow textarea{
+    width: 600px;
+    resize: none;
+    border: 2px #245280 solid;
+    border-radius: 15px;
+    padding: 15px;
+    font-size: 20px;
+}
+
+
+.txt{
+    background-color: white;
+    width: fit-content;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 21px rgba(0, 0, 0, 0.38);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.txt h1{
+    margin: 0;
+    font-size: 18px;
+
+}
+
+.txt0{
+    min-height: 100px;
+    width: 100%;
+    position: relative;
+}
+
+
+
+
+@media screen and (max-width: 414px) and (min-width: 360px){
+    html{
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+    }
+    #home{display: none;}
+    #homeMob{display: flex;
+            width: fit-content;
+            position: absolute;
+            right: 20px;top: 40px;}        
+    #menuBtn{top: 20px;}
+    #titleCour{font-size: 40px; margin: 20px auto 10px auto;}
+    #menu{display: none;}
+    #menu.active{display: block;}
+
+    #upload {
+    font-size: 14px;
+    position: relative;
+    top: 0;
+    left: 60%;
+    margin-top: 0;
+    }
+
+    .announce{
+        padding: 7px 20px;
+        padding-top: 15px;
+        margin: 20px auto;
+        width: 300px;
+    }
+
+
+    .announce .options{
+        float: right;
+        position: absolute;
+        top: 7px;
+        right: 7px;
+    }
+    .announce #edit, #delete, #visibal{
+        font-size: 12px;
+        font-weight: 500;
+        padding: 5px 1px;
+        width: 45px;
+    }
+
+    .anninfo #by{
+        font-size: 15px;
+    }
+
+    .anninfo #date{
+        font-size: 11px;
+        margin-left: 7px;
+    }
+    .txt{padding: 10px;}
+    .txt h1{font-size: 15px; text-align: center;}
+    .passwindow{width: 100%;}
+    .passch h1{font-size: 20px;}
+    .passwindow textarea{width: 80%;}
+    .passwindow form{width: 100%; margin: 0 auto;}
+    
+    .editwindow{width: 100%;}
+    .editch h1{font-size: 20px;}
+    .editwindow textarea{width: 80%;}
+    .editwindow form{width: 100%; margin: 0 auto;}
+}
