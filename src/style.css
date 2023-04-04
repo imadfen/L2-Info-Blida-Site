@@ -1,0 +1,206 @@
+body{
+    background: rgb(223, 251, 255);
+    margin: 0%;
+    z-index: 1;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+}
+
+h1{
+    text-align: center;
+}
+
+.bac{
+    width: 100%;
+    position: relative;
+}
+
+.field{
+    background-color: #b1dae7;
+    float: right;
+    width: 40%;
+    margin-top: 4%;
+    margin-right: 8%;
+    min-width: auto;
+    padding: 0 auto;
+    border-radius: 15px;
+    box-shadow: 0px 0px 0.9px rgba(0, 0, 0, 0.183), 0px 0px 2.3px rgba(0, 0, 0, 0.262), 0px 0px 4.6px rgba(0, 0, 0, 0.328), 0px 0px 9.5px rgba(0, 0, 0, 0.407), 0px 0px 26px rgba(0, 0, 0, 0.59);
+
+}
+
+.form{
+    width: fit-content;
+    margin: 0 auto;
+}
+input{
+    border: 2px solid #245280 ;
+    font-family: 'work sans', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 20px;
+    height: 35px;
+}
+
+.inputfield input{
+    padding-left: 40px;
+}
+
+.inputfield{
+    position: relative;
+    width: fit-content;
+    margin: 2px auto;
+}
+
+.inputfield i{
+    position: absolute;
+    left: 13px;
+    top: 12px;
+}
+
+#submit{
+    margin-top: 15px;
+    overflow: hidden;
+    width: 100%;
+    height: 60px;
+    position: relative;
+}
+
+#submit div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.subbtn {
+ position: relative;
+ padding: 10px 40px;
+ margin: 0px auto;
+ float: left;
+ border-radius: 3px;
+ font-size: 20px;
+ color: #FFF;
+ text-decoration: none;
+ background-color: #23c483;
+ border: none;
+ border-bottom: 5px solid rgb(29, 143, 97);
+ text-shadow: 0px -2px rgb(29, 143, 97);
+ -webkit-transition: all 0.1s;
+ transition: all 0.1s;
+}
+
+.subbtn:hover, .subbtn:active {
+ -webkit-transform: translate(0px,5px);
+ -ms-transform: translate(0px,5px);
+ transform: translate(0px,5px);
+ border-bottom: 1px solid rgb(29, 143, 97);
+}
+
+
+.pic{
+    padding-left: 3%;
+}
+
+.pic img{
+    width: 50%;
+    margin-top: 1%;
+    float: left;
+}
+
+/* From uiverse.io by @adamgiebl */
+/* Hide the default checkbox */
+.contain input {
+ position: absolute;
+ opacity: 0;
+ cursor: pointer;
+ height: 0;
+ width: 0;
+}
+
+.contain {
+ display: block;
+ position: relative;
+ cursor: pointer;
+ font-size: 20px;
+ user-select: none;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+ position: relative;
+ top: 0;
+ left: 0;
+ height: 1.3em;
+ width: 1.3em;
+ background-color: #ccc;
+ transition: all 0.3s;
+ border-radius: 5px;
+}
+
+/* When the checkbox is checked, add a blue background */
+.contain input:checked ~ .checkmark {
+ background-color: #245280;
+ animation: pop 0.5s;
+ animation-direction: alternate;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+ content: "";
+ position: absolute;
+ display: none;
+}
+
+/* Show the checkmark when checked */
+.contain input:checked ~ .checkmark:after {
+ display: block;
+}
+
+/* Style the checkmark/indicator */
+.contain .checkmark:after {
+ left: 0.45em;
+ top: 0.25em;
+ width: 0.25em;
+ height: 0.5em;
+ border: solid white;
+ border-width: 0 0.15em 0.15em 0;
+ transform: rotate(45deg);
+}
+
+
+
+@keyframes pop {
+ 0% {
+  transform: scale(1);
+ }
+
+ 50% {
+  transform: scale(0.9);
+ }
+
+ 100% {
+  transform: scale(1);
+ }
+}
+
+@media screen and (max-width: 414px) and (min-width: 360px){
+    .pic{
+        display: none;
+    }
+
+    .field{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: fit-content;
+        padding: 0 10px 0 10px;
+    }
+
+    .field h4{
+        width: 260px;
+        text-align: center;
+        margin: 20px auto;
+    }
+}
